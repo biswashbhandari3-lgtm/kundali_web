@@ -487,13 +487,19 @@ h1, h2, h3, h4, h5, h6,
     box-shadow: 0 0 0 3px rgba(198, 164, 92, 0.2);
 }
 
+.form-group-span-2 {
+    grid-column: span 2;
+}
+
 .date-triplet {
     display: flex;
     gap: 8px;
 }
 
-.date-triplet select {
+.date-triplet select,
+.date-triplet input {
     flex: 1;
+    min-width: 0;
 }
 
 /* Buttons */
@@ -8278,6 +8284,750 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 500;
     padding: 4px 8px;
 }
+
+/* ==========================================================================
+   १३. सम्पूर्ण मोबाइल रेस्पोन्सिभ तथा हेडिफुल युनिफाइड प्रणाली (Comprehensive Mobile Responsive Engine)
+   Covering: All 5 Tabs, Headings, Navigation, Forms, Cards, Charts, Tables, & Modals
+   ========================================================================== */
+
+/* १. विश्वव्यापी (Universal) कन्टेनर तथा ओभरफ्लो सुरक्षा */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+}
+
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* २. युनिफाइड हेडिफुल (Fluid Heading & Typography System) */
+h1, .header-titles h1 {
+    font-size: clamp(1.35rem, 5vw, 2.05rem);
+    line-height: 1.25;
+}
+
+h2, .card-title, .china-print-heading, .parva-banner-title {
+    font-size: clamp(1.15rem, 4.2vw, 1.55rem);
+    line-height: 1.3;
+}
+
+h3, .card-header-title, .phaladesh-sec-title, .section-title, .dasha-all-section-title {
+    font-size: clamp(1.02rem, 3.8vw, 1.3rem);
+    line-height: 1.35;
+}
+
+h4, .comprehensive-sec-title, .dasha-phala-heading, .saved-item-info h4 {
+    font-size: clamp(0.92rem, 3.4vw, 1.15rem);
+    line-height: 1.38;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    word-break: break-word;
+}
+
+.card-title > span:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ३. स्टिकी नेभिगेसन बार (Sticky Mobile-Friendly Nav Tabs) */
+.nav-tabs-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(16, 26, 51, 0.2);
+}
+
+.nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 8px;
+}
+
+.nav-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+/* ४. फारमहरू तथा ग्रिडहरूको रेस्पोन्सिभ नियमहरू */
+.form-actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-refresh-text {
+    background: #FFFDF9;
+    border: 1.5px solid var(--border-gold);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-refresh-text:hover {
+    background: var(--gold-light);
+    border-color: var(--gold);
+}
+
+/* ====================================================
+   ब्रेकपोइन्ट: १०२४px मुनि (Tablets & Medium Screens)
+   ==================================================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
+    .china-pdf-options-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====================================================
+   ब्रेकपोइन्ट: ७६८px मुनि (Tablets & Large Mobiles)
+   ==================================================== */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 16px 0 12px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0 14px;
+    }
+
+    .ganesh-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .shloka {
+        font-size: 0.84rem;
+        line-height: 1.45;
+    }
+
+    .header-meta {
+        font-size: 0.78rem;
+    }
+
+    .container {
+        padding: 0 14px;
+        margin: 16px auto;
+    }
+
+    .card {
+        padding: 18px 14px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+    }
+
+    /* कुण्डली मिलान केटा र केटी फारम ठाडो रूपमा */
+    #tab-milan .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    /* फलादेश हेडर बार */
+    .phaladesh-header-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    .phaladesh-header-bar .btn-primary {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* दशा ३ स्तम्भ ग्रिड */
+    .dasha-3col-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dasha-side-panel-wrapper {
+        max-width: 100% !important;
+    }
+}
+
+/* ====================================================
+   ब्रेकपोइन्ट: ६४०px मुनि (Standard Mobiles)
+   ==================================================== */
+@media (max-width: 640px) {
+    /* नेभिगेसन ट्याब बटनहरू */
+    .nav-tab-btn {
+        padding: 10px 14px;
+        font-size: 0.88rem;
+    }
+
+    /* फारम ग्रिड एकल स्तम्भ (Single Column Collapse) */
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+    }
+
+    .form-group-span-2,
+    .form-grid > .form-group[style*="grid-column: span 2"] {
+        grid-column: span 1 !important;
+    }
+
+    .form-actions-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    .form-actions-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    .form-actions-group button,
+    .form-actions-group .siddhanta-switch-container {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    #generateKundaliBtn,
+    #saveCurrentKundaliFormBtn,
+    #openSavedModalBtn,
+    #calculateMatchBtn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 16px !important;
+        font-size: 0.98rem !important;
+    }
+
+    /* डेट ट्रिपलेट (Year, Month, Day) */
+    .date-triplet {
+        gap: 6px;
+    }
+
+    .date-triplet select,
+    .date-triplet input {
+        padding: 8px 6px;
+        font-size: 0.86rem;
+    }
+
+    /* जातक सारांश कार्ड र ग्रिड */
+    .info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .surya-bija-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        font-size: 0.82rem;
+    }
+
+    /* चिना PDF मुद्रण कार्ड */
+    .china-print-card-header {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+    }
+
+    .china-print-subtext {
+        font-size: 0.85rem;
+    }
+
+    .china-option-card {
+        padding: 14px 16px;
+    }
+
+    .china-option-card .option-actions-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    .btn-china-action {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 10px 14px !important;
+        font-size: 0.88rem !important;
+    }
+
+    /* चक्रहरू साइड-बाइ-साइड १ स्तम्भमा */
+    .charts-side-by-side-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .chart-item-col .chart-wrapper,
+    .chart-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 6px;
+    }
+
+    .chart-wrapper svg,
+    .chart-svg-box svg {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* षोडशवर्ग नेभिगेसन बार */
+    .varga-nav-bar {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .varga-pill {
+        padding: 5px 10px;
+        font-size: 0.78rem;
+    }
+
+    /* तालिका स्क्रोल कन्टेनरहरू */
+    .patrika-spashta-table {
+        min-width: 520px;
+    }
+
+    .patrika-spashta-table th,
+    .patrika-spashta-table td {
+        padding: 6px 8px !important;
+        font-size: 0.82rem !important;
+    }
+
+    .panchadha-master-table {
+        min-width: 500px !important;
+    }
+
+    .panchadha-master-table th,
+    .panchadha-master-table td {
+        padding: 6px 4px !important;
+        font-size: 0.76rem !important;
+    }
+
+    /* कुण्डली मिलान नतिजा ब्यानर */
+    .milan-score-banner {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+
+    .score-num {
+        font-size: 2.5rem;
+    }
+
+    .verdict-display h3 {
+        font-size: 1.25rem;
+    }
+
+    .verdict-display p {
+        font-size: 0.88rem;
+    }
+
+    #milanResult .styled-table {
+        min-width: 440px;
+    }
+
+    /* चाडपर्व खण्ड (Tab 3: Parva) */
+    .parva-header-banner {
+        padding: 18px 14px;
+        margin-bottom: 16px;
+    }
+
+    .parva-banner-desc {
+        font-size: 0.85rem;
+        margin-bottom: 14px;
+    }
+
+    .parva-stats-row {
+        gap: 8px;
+    }
+
+    .parva-stat-card {
+        flex: 1 1 100% !important;
+        justify-content: space-between;
+        padding: 8px 14px !important;
+    }
+
+    .parva-controls-card {
+        padding: 14px;
+        margin-bottom: 18px;
+    }
+
+    .parva-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .parva-search-wrapper {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .parva-cat-filters {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        padding-bottom: 4px;
+        width: 100%;
+    }
+
+    .parva-cat-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .parva-cat-btn {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        font-size: 0.78rem;
+    }
+
+    .parva-month-bar {
+        padding-top: 10px;
+        gap: 8px;
+    }
+
+    .parva-month-btns {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        padding-bottom: 4px;
+        width: 100%;
+    }
+
+    .parva-month-btns::-webkit-scrollbar {
+        display: none;
+    }
+
+    .parva-month-btn {
+        flex-shrink: 0;
+        padding: 5px 10px;
+        font-size: 0.78rem;
+    }
+
+    .parva-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .parva-month-section {
+        padding: 14px;
+    }
+
+    /* फलादेश खण्ड (Tab 4: Phaladesh) */
+    .phaladesh-native-summary-card {
+        grid-template-columns: 1fr !important;
+        gap: 8px;
+        padding: 12px 14px;
+        font-size: 0.88rem;
+    }
+
+    .phaladesh-filter-bar {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        justify-content: flex-start !important;
+        gap: 6px;
+        padding: 8px 10px;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .phaladesh-filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .phal-filter-btn {
+        flex-shrink: 0;
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+
+    .phaladesh-card {
+        padding: 14px 12px;
+    }
+
+    .phaladesh-card-header {
+        gap: 10px;
+    }
+
+    .phaladesh-badge-icon {
+        font-size: 1.45rem;
+    }
+
+    .phaladesh-card-body p {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .phaladesh-pros-cons-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px;
+    }
+
+    /* मोडलहरू (Modals on Mobile) */
+    .modal-card {
+        width: 95% !important;
+        max-height: 90vh !important;
+        margin: 8px !important;
+        border-radius: 12px !important;
+    }
+
+    .modal-header {
+        padding: 12px 16px;
+    }
+
+    .modal-body {
+        padding: 14px 12px;
+    }
+
+    .saved-item-card {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        padding: 12px;
+    }
+
+    .saved-item-actions {
+        width: 100% !important;
+        justify-content: space-between !important;
+    }
+
+    .saved-item-actions button {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 12px;
+    }
+
+    .report-config-modal-card {
+        width: 96% !important;
+        max-height: 92vh !important;
+    }
+
+    .report-config-top-bar {
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 12px !important;
+    }
+
+    .config-bar-item {
+        flex: 1 1 100% !important;
+    }
+
+    .report-config-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .report-modal-footer {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        padding: 12px !important;
+    }
+
+    .modal-footer-left,
+    .modal-footer-right {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .modal-footer-right button {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* पूर्ण जन्मपत्रिका पूर्वावलोकन टूलबार */
+    .report-preview-toolbar {
+        height: auto;
+        min-height: 52px;
+        padding: 8px 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    .toolbar-left, .toolbar-center, .toolbar-right {
+        gap: 6px;
+    }
+
+    .toolbar-btn {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+    }
+
+    /* १० शास्त्रीय खण्डहरू (Comprehensive Section) */
+    .comprehensive-section-card {
+        padding: 12px 10px;
+    }
+
+    .vedic-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px;
+    }
+
+    .comprehensive-vedic-table {
+        min-width: 480px;
+    }
+
+    .comprehensive-vedic-table th,
+    .comprehensive-vedic-table td {
+        padding: 6px 8px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* दशा फलादेश कार्ड */
+    .dasha-phala-card {
+        padding: 8px 10px;
+    }
+
+    .dasha-phala-date-banner {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 4px 8px;
+    }
+
+    .dasha-phala-date-banner .dasha-date-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ====================================================
+   ब्रेकपोइन्ट: ४८०px मुनि (Small Mobiles down to 320px)
+   ==================================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+        margin: 10px auto;
+    }
+
+    .card {
+        padding: 14px 10px;
+        margin-bottom: 14px;
+        border-radius: 8px;
+    }
+
+    .header-titles h1 {
+        font-size: 1.35rem;
+    }
+
+    .shloka {
+        font-size: 0.76rem;
+    }
+
+    .header-meta {
+        font-size: 0.72rem;
+    }
+
+    /* क्यालेन्डर शीर्ष बार नियन्त्रकहरू */
+    .cal-header-select {
+        font-size: 0.78rem !important;
+        padding-left: 0.4rem !important;
+        padding-right: 1.2rem !important;
+    }
+
+    /* क्यालेन्डर ७-स्तम्भ ग्रिड */
+    #calendarGridDays .cal-cell {
+        height: 32px !important;
+        min-height: 28px !important;
+        font-size: 0.75rem !important;
+        margin: 0 !important;
+        border-radius: 4px !important;
+    }
+
+    /* क्यालेन्डर मुनिका ६ वटा कार्डहरू ३ स्तम्भमा */
+    .cal-bottom-card {
+        min-height: 58px !important;
+        padding: 3px 2px !important;
+    }
+
+    .cal-bottom-card div:first-child {
+        font-size: 0.65rem !important;
+    }
+
+    .cal-bottom-card [id^="calBottom"] {
+        font-size: 0.7rem !important;
+    }
+
+    .cal-bottom-card [id$="Time"] {
+        font-size: 0.62rem !important;
+    }
+
+    /* घडी डायल फेस आकार */
+    .clock-face {
+        width: 170px !important;
+        height: 170px !important;
+    }
+
+    #clockDigitalTime {
+        font-size: 1.25rem !important;
+    }
+
+    /* दशा फलादेश श्लोक बक्स */
+    .dasha-phala-shloka-box {
+        padding: 5px 8px;
+    }
+
+    .dasha-phala-shloka-text {
+        font-size: 0.78rem;
+    }
+
+    .dasha-phala-nepali-content {
+        font-size: 0.74rem;
+    }
+
+    /* अष्टकवर्ग लीजेन्ड */
+    .ashtakavarga-legend {
+        gap: 4px;
+        font-size: 0.72rem;
+    }
+
+    .legend-chip {
+        padding: 1px 6px;
+    }
+}
+
 
 
 

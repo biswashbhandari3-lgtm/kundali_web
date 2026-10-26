@@ -489,7 +489,7 @@
                     </div>
 
                     <!-- जन्म मिति विक्रम संवत् -->
-                    <div class="form-group" style="grid-column: span 2;">
+                    <div class="form-group form-group-span-2">
                         <label>जन्म मिति (विक्रम संवत्):</label>
                         <div class="date-triplet">
                             <select id="bsYear" class="form-control"></select>
@@ -535,8 +535,8 @@
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 18px; flex-wrap: wrap; gap: 12px;">
-                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <div class="form-actions-row" style="display: flex; justify-content: space-between; align-items: center; margin-top: 18px; flex-wrap: wrap; gap: 12px;">
+                    <div class="form-actions-group" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                         <button id="openSavedModalBtn" class="btn-gold" type="button">
                             📂 सुरक्षित कुण्डलीहरू (<span id="savedCountBadge">०</span>)
                         </button>
@@ -547,7 +547,7 @@
                     </div>
                     
                     <!-- सिद्धान्त तथा कुण्डली निर्माण बटन -->
-                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <div class="form-actions-group" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                         <!-- सिद्धान्त मानक ब्याज -->
                         <div class="siddhanta-switch-container" title="मानक ज्योतिषीय पद्धति: शुद्ध सूर्यसिद्धान्त (मूल पारम्परिक अहर्गण एवं भगण पद्धति - बिना बीजसंस्कार)">
                             <span class="siddhanta-switch-label">पद्धति:</span>
@@ -649,7 +649,7 @@
 
                 <div class="card">
                     <h2 id="grahaSpashtaTitle" class="card-title">🪐 ग्रहस्पष्ट तालिका</h2>
-                    <div style="overflow-x: auto;">
+                    <div class="table-responsive" style="overflow-x: auto;">
                         <table class="patrika-spashta-table">
                             <thead>
                                 <tr>
@@ -749,7 +749,7 @@
 
             <div class="card">
                 <h2 class="card-title">📊 गुण मिलान नतिजा तथा विश्लेषण</h2>
-                <div id="milanResult">
+                <div id="milanResult" class="table-responsive">
                     <p style="color: var(--text-muted); text-align: center; padding: 20px;">
                         माथिको फारममा वर र कन्याको जन्म विवरण राखी "३६ गुण मिलान गणना गर्नुहोस्" मा क्लिक गर्नुहोस्।
                     </p>
